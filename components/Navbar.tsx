@@ -115,7 +115,7 @@ function Navbar() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // 页面初始加载时立即检测当前可见区域并设置高亮框
+    // 页面初始加载时立即检测当前可见区域并设置高亮框1
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
