@@ -19,3 +19,36 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: 'LogoFont';
+  src: url('/fonts/DancingScript-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'LogoFont';
+  src: url('/fonts/DancingScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'firstFont';
+  src: url('/fonts/Raleway-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+.first-font {
+  font-family: 'firstFont', sans-serif;
+}
+
+@font-face {
+  font-family: 'NavFont';
+  src: url('/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+.nav-font {
+  font-family: 'NavFont', sans-serif;
+}
