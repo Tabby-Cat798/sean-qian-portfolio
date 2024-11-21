@@ -1,5 +1,4 @@
 import './globals.css'; // Tailwind CSS 文件路径
-import { useState, useEffect } from 'react';
 export default function Page() {
   return (
     <main>
