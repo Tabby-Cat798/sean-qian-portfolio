@@ -23,6 +23,7 @@ export default function Page() {
           >
             Macau University of Science and Technology
           </a>
+          
           {/* 社交图标 */}
           <div className="flex gap-4" style={{ marginTop: '20px' }}>
             {/* Instagram 图标 */}
