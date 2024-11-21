@@ -52,3 +52,21 @@ html {
 .nav-font {
   font-family: 'NavFont', sans-serif;
 }
+
+@font-face {
+  font-family: 'ContentFont';
+  src: url('/fonts/JosefinSans-Regular.ttf') format('truetype');
+  font-weight: 500;
+}
+.content-font {
+  font-family: 'ContentFont', sans-serif;
+}
+
+@font-face {
+  font-family: 'Content2Font';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 500;
+}
+.content2-font {
+  font-family: 'Content2Font', sans-serif;
+}
