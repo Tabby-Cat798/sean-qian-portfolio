@@ -1,4 +1,8 @@
+"use client";
 import './globals.css'; // Tailwind CSS 文件路径
+import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
+
 export default function Page() {
   return (
     <main>
@@ -91,14 +95,27 @@ export default function Page() {
 
           <h2 className="text-5xl text-gray-800 mb-6 fontFamily= nav-font">About Me</h2>
             
+          {/* 使用 TypeAnimation 库实现打字效果 */}
           <p className="text-2xl text-gray-700 first-font leading-relaxed mb-4">
-            "Do what you want, and fight for what you want."
+            <TypeAnimation
+              sequence={[
+                'Do what you want, and fight for what you want.', // 英文部分
+                2000, // 停顿时间
+                '做你想做的事，为你想要的而奋斗。', // 中文部分
+                2000, // 停顿时间
+                () => console.log('Sequence completed!'), // 完成后的回调
+              ]}
+              speed={70} // 打字速度
+              style={{ fontSize: '2rem', fontWeight: 'bold' }} // 样式
+              repeat={Infinity} // 循环播放
+            />
           </p>
+
           <p className="text-lg text-gray-700 leading-relaxed fontFamily= content-font" >
-          Welcome to my channel, I am Qian Shiru, you can also call me Sean, a 21st year undergraduate student from Macau University of Science and Technology 
-          majoring in Food and Nutritional Sciences. 
-          My future research direction is in the field of food science and public health. 
-          If you want to know more about me, please click your mouse!
+            Welcome to my channel, I am Qian Shiru, you can also call me Sean, a 21st year undergraduate student from Macau University of Science and Technology 
+            majoring in Food and Nutritional Sciences. 
+            My future research direction is in the field of food science and public health. 
+            If you want to know more about me, please click your mouse!
           </p>
           {/* 兴趣和教育 */}
           <div className="mt-6">
