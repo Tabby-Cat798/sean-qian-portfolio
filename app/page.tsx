@@ -9,7 +9,7 @@ export default function Page() {
       {/* 第一个板块，左右分区布局 */}
       <section
         id="me"
-        className="h-screen bg-gradient-to-b from-purple-300 via-blue-200 to-white flex items-center justify-center px-48"
+        className="h-screen bg-gradient-to-b from-purple-300 via-blue-200 to-white flex items-center justify-center md:px-36 lg:px-48"
       >
         {/* 左侧：图片和基本信息 */}
         <div className="flex-1 flex flex-col items-center text-center">
@@ -106,7 +106,7 @@ export default function Page() {
                 () => console.log('Sequence completed!'), // 完成后的回调
               ]}
               speed={70} // 打字速度
-              style={{ fontSize: '2rem', fontWeight: 'bold' }} // 样式
+              style={{ fontWeight: 'light' }} // 样式
               repeat={Infinity} // 循环播放
             />
           </p>
