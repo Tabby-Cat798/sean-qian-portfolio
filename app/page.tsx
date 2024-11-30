@@ -121,7 +121,7 @@ export default function Page() {
 
       {/* 第二个板块 */}
       <section id="experience" className="bg-white flex flex-col items-center text-center py-16">
-  <h1 className="text-4xl font-bold text-gray-800 mb-12 mt-8">Experience</h1>
+  <h1 className="text-5xl font-bold text-gray-800 mb-12 mt-8 fontFamily= nav-font">Experience</h1>
   <div className="relative w-full max-w-5xl">
     {/* 时间线主轴 */}
     <div className="absolute w-1 bg-gray-300 left-1/2 transform -translate-x-1/2 h-full"></div>
@@ -227,17 +227,95 @@ export default function Page() {
 </section>
 
 
-      {/* 第三个板块 */}
-      <section
-        id="publications"
-        className="h-screen bg-white flex flex-col items-center text-center"
-      >
-        <h1 className="text-4xl font-bold text-gray-800 mb-4 mt-24">Publications</h1>
-        <p className="text-xl text-gray-600 max-w-2xl">
-          Offering full-stack web development services with a focus on modern frameworks and
-          performance optimization.
-        </p>
-      </section>
+<section id="publications" className="h-auto bg-gray-100 flex items-center justify-center px-8 py-24">
+  {/* 标题与提示水平排列 */}
+  <div className="flex gap-8 w-full max-w-5xl">
+    {/* 标题 */}
+    <div className="flex flex-col gap-4 flex-1 justify-center">
+      <h1 className="text-5xl font-bold text-gray-800 fontFamily= nav-font">Recent</h1>
+      <h1 className="text-5xl font-bold text-gray-800 fontFamily= nav-font">Publications</h1>
+    </div>
+    {/* 提示信息 */}
+    <div className="flex flex-col gap-2 w-full">
+      <div className="bg-blue-100 border border-blue-300 text-blue-800 rounded-lg p-4 flex-1">
+        <span className="text-xl mr-2">ℹ️</span>
+        <span>
+          View this article on <a href="https://drpress.org/ojs/index.php/HSET/article/view/21133" target="_blank" className="text-blue-600 underline">DR Press</a>.
+        </span>
+      </div>
+      <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl w-full flex items-center gap-6">
+        {/* 图标 */}
+        <div className="text-3xl flex-shrink-0">📄</div>
+
+        {/* 论文标题及信息 */}
+        <div className="flex-1">
+          <p className="text-sm text-gray-600 mb-1">
+            <span className="font-semibold">Qian Shiru</span> (2024)
+          </p>
+          <h3 className="text-lg text-gray-800 font-bold">Effects of Sugary Drinks (Sugar Substitutes) on the Human Body</h3>
+        </div>
+
+        {/* 操作按钮 */}
+        <div className="flex gap-4">
+          <a href="/documents/article.pdf" target="_blank" className="bg-gray-100 px-4 py-2 rounded-lg border border-gray-300 text-gray-700 text-sm hover:bg-gray-200">
+            PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section id="project" className="h-auto bg-white flex items-center justify-center px-8 py-24">
+  
+  
+  {/* 项目 1 */}
+  <div className="flex gap-8 w-full max-w-5xl">
+  <div className="shadow-lg rounded-lg p-6 w-full max-w-4xl mb-8">
+    {/* 项目标题 */}
+    <h3 className="text-3xl font-semibold text-gray-800 mb-4" style={{ fontFamily: 'content2-font' }}>"Fei He Xing Fei Fan Zhuo Rui Milk Powder"</h3>
+    
+    {/* 项目描述 */}
+    <p className="text-lg text-gray-600 mb-4" style={{ fontFamily: 'content2-font' }}>
+    Analyze the characteristics of the product, the reasons why it sells well, the audience and the marketing strategy, etc.
+    </p>
+
+    {/* 图片展示 */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+      <div className="flex justify-center">
+        <img src="/image1.png" alt="Project Image 1" className="w-full h-auto rounded-lg" />
+      </div>
+      <div className="flex justify-center">
+        <img src="/image2.png" alt="Project Image 2" className="w-full h-auto rounded-lg" />
+      </div>
+    </div>
+
+    {/* 项目链接 */}
+    <div className="flex justify-center">
+      <a href="/documents/slides.pptx" target="_blank" className="text-blue-500 hover:underline text-xl">
+        View Project Slides
+      </a>
+    </div>
+  </div>
+  <div className="flex flex-col justify-center gap-4 flex-1">
+  <h2 className="text-5xl font-bold text-gray-800 fontFamily= nav-font">Group</h2>
+  <h2 className="text-5xl font-bold text-gray-800 fontFamily= nav-font">Project</h2>
+  </div>
+  </div>
+</section>
+
+<footer className="bg-gray-900 text-white py-4">
+  <div className="max-w-screen-xl mx-auto text-center">
+    <p className="text-sm">
+      &copy; {new Date().getFullYear()} Sean-qian-portfolio. All rights reserved.
+    </p>
+  </div>
+</footer>
 
     </main>
   );

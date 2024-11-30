@@ -7,6 +7,7 @@ const sections = [
   { id: 'me', title: 'Me' },
   { id: 'experience', title: 'Experience' },
   { id: 'publications', title: 'Publications' },
+  { id: 'project', title: 'Project' },
   { id: 'cv', title: 'CV' }, // 添加到高亮逻辑中
 ];
 
@@ -99,18 +100,20 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-
+      setIsScrolled(window.scrollY > 100); // 滚动超过100px时切换导航栏背景色
+    
       sections.forEach(({ id }) => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+          // 判断板块是否进入视窗
+          if (rect.top <= window.innerHeight / 2 && rect.bottom > 0) {
             setActiveSection(id);
           }
         }
       });
     };
+    
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
